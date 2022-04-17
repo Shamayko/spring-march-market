@@ -4,14 +4,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
-public class ProductDto {
+public class CartDto {
 
-    private Long id;
-    private String title;
-    private BigDecimal price;
-    private String categoryTitle;
-
+    private List<CartItemDto> items;
+    private BigDecimal totalPrice;
 }
