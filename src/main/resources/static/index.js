@@ -56,6 +56,15 @@ angular.module('market', []).controller('indexController', function ($scope, $ht
                 })
         }
 
+     $scope.login = function (){
+         console.log($scope.user)
+         $http.post('http://localhost:8189/market/auth', $scope.user)
+             .then(function (response){
+                 $scope.token = response.data.token;
+                 console.log(response)
+             });
+     }
+
     $scope.fillCart();
     $scope.fillTable();
 });

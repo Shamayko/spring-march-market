@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 
 @Data
-@NoArgsConstructor
+//@NoArgsConstructor
 public class CartItemDto {
 
     private Long productId;
